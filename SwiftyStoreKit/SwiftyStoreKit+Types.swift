@@ -183,7 +183,7 @@ public enum ReceiptStatus: Int {
     // This receipt is from the production environment, but it was sent to the test environment for verification. Send it to the production environment instead.
     case productionEnvironment = 21008
 
-    var isValid: Bool { return self == .valid}
+    public var isValid: Bool { return self == .valid}
 }
 
 // Receipt field as defined in : https://developer.apple.com/library/ios/releasenotes/General/ValidateAppStoreReceipt/Chapters/ReceiptFields.html#//apple_ref/doc/uid/TP40010573-CH106-SW1
