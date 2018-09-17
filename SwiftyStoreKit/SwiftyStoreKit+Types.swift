@@ -183,6 +183,12 @@ public enum ReceiptStatus: Int {
     // This receipt is from the production environment, but it was sent to the test environment for verification. Send it to the production environment instead.
     case productionEnvironment = 21008
 
+    case appleValidationNotPass = 30000
+	case receiptNotMatching = 30001
+	case appIDNotValid = 30002
+	case productIDNotValid = 30003
+    case receiptDuplicated = 30004
+
     public var isValid: Bool { return self == .valid}
 }
 
